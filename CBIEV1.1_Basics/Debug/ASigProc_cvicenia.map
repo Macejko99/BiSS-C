@@ -1,0 +1,771 @@
+******************************************************************************
+             TMS320C2000 Linker Unix v20.2.1                   
+******************************************************************************
+>> Linked Thu Apr 15 16:25:04 2021
+
+OUTPUT FILE NAME:   <ASigProc_cvicenia.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000953c
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  BEGIN                 00000000   00000002  00000002  00000000  RWIX
+  RAMM0                 00000123   000002dd  00000030  000002ad  RWIX
+  RAMLS0                00008000   00000800  000007fe  00000002  RWIX
+  RAMLS1                00008800   00000800  000007ff  00000001  RWIX
+  RAMLS2                00009000   00000800  000005ad  00000253  RWIX
+  RAMLS3                00009800   00000800  00000000  00000800  RWIX
+  RAMLS4                0000a000   00000800  00000000  00000800  RWIX
+  RAMD0                 0000b000   00000800  00000800  00000000  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+PAGE 1:
+  BOOT_RSVD             00000002   00000121  00000000  00000121  RWIX
+  RAMM1                 00000400   000003f8  00000200  000001f8  RWIX
+  ADCARESULT            00000b00   00000018  00000018  00000000  RWIX
+  ADCBRESULT            00000b20   00000018  00000018  00000000  RWIX
+  ADCCRESULT            00000b40   00000018  00000000  00000018  RWIX
+  ADCDRESULT            00000b60   00000018  00000000  00000018  RWIX
+  CPUTIMER0             00000c00   00000008  00000000  00000008  RWIX
+  CPUTIMER1             00000c08   00000008  00000000  00000008  RWIX
+  CPUTIMER2             00000c10   00000008  00000000  00000008  RWIX
+  PIECTRL               00000ce0   0000001a  0000001a  00000000  RWIX
+  PIEVECTTABLE          00000d00   00000200  000001c0  00000040  RWIX
+  DMA                   00001000   00000200  00000000  00000200  RWIX
+  CLA1                  00001400   00000080  00000000  00000080  RWIX
+  CLB1LOGICCFG          00003000   00000052  00000000  00000052  RWIX
+  CLB1LOGICCTRL         00003100   00000040  00000000  00000040  RWIX
+  CLB1DATAEXCH          00003200   00000200  00000000  00000200  RWIX
+  CLB2LOGICCFG          00003400   00000052  00000000  00000052  RWIX
+  CLB2LOGICCTRL         00003500   00000040  00000000  00000040  RWIX
+  CLB2DATAEXCH          00003600   00000200  00000000  00000200  RWIX
+  CLB3LOGICCFG          00003800   00000052  00000000  00000052  RWIX
+  CLB3LOGICCTRL         00003900   00000040  00000000  00000040  RWIX
+  CLB3DATAEXCH          00003a00   00000200  00000000  00000200  RWIX
+  CLB4LOGICCFG          00003c00   00000052  00000000  00000052  RWIX
+  CLB4LOGICCTRL         00003d00   00000040  00000000  00000040  RWIX
+  CLB4DATAEXCH          00003e00   00000200  00000000  00000200  RWIX
+  EPWM1                 00004000   00000100  00000000  00000100  RWIX
+  EPWM2                 00004100   00000100  00000000  00000100  RWIX
+  EPWM3                 00004200   00000100  00000100  00000000  RWIX
+  EPWM4                 00004300   00000100  00000000  00000100  RWIX
+  EPWM5                 00004400   00000100  00000000  00000100  RWIX
+  EPWM6                 00004500   00000100  00000100  00000000  RWIX
+  EPWM7                 00004600   00000100  00000000  00000100  RWIX
+  EPWM8                 00004700   00000100  00000000  00000100  RWIX
+  EPWM9                 00004800   00000100  00000000  00000100  RWIX
+  EPWM10                00004900   00000100  00000000  00000100  RWIX
+  EPWM11                00004a00   00000100  00000000  00000100  RWIX
+  EPWM12                00004b00   00000100  00000000  00000100  RWIX
+  ECAP1                 00005000   00000020  00000000  00000020  RWIX
+  ECAP2                 00005020   00000020  00000000  00000020  RWIX
+  ECAP3                 00005040   00000020  00000000  00000020  RWIX
+  ECAP4                 00005060   00000020  00000000  00000020  RWIX
+  ECAP5                 00005080   00000020  00000000  00000020  RWIX
+  ECAP6                 000050a0   00000020  00000000  00000020  RWIX
+  EQEP1                 00005100   00000022  00000022  00000000  RWIX
+  EQEP2                 00005140   00000022  00000000  00000022  RWIX
+  EQEP3                 00005180   00000022  00000000  00000022  RWIX
+  DACA                  00005c00   00000008  00000000  00000008  RWIX
+  DACB                  00005c10   00000008  00000000  00000008  RWIX
+  DACC                  00005c20   00000008  00000000  00000008  RWIX
+  CMPSS1                00005c80   00000020  00000000  00000020  RWIX
+  CMPSS2                00005ca0   00000020  00000000  00000020  RWIX
+  CMPSS3                00005cc0   00000020  00000000  00000020  RWIX
+  CMPSS4                00005ce0   00000020  00000000  00000020  RWIX
+  CMPSS5                00005d00   00000020  00000000  00000020  RWIX
+  CMPSS6                00005d20   00000020  00000000  00000020  RWIX
+  CMPSS7                00005d40   00000020  00000000  00000020  RWIX
+  CMPSS8                00005d60   00000020  00000000  00000020  RWIX
+  SDFM1                 00005e00   00000080  00000000  00000080  RWIX
+  SDFM2                 00005e80   00000080  00000000  00000080  RWIX
+  MCBSPA                00006000   00000024  00000000  00000024  RWIX
+  MCBSPB                00006040   00000024  00000000  00000024  RWIX
+  SPIA                  00006100   00000010  00000000  00000010  RWIX
+  SPIB                  00006110   00000010  00000010  00000000  RWIX
+  SPIC                  00006120   00000010  00000000  00000010  RWIX
+  UPP                   00006200   00000048  00000000  00000048  RWIX
+  WD                    00007000   0000002b  0000002b  00000000  RWIX
+  NMIINTRUPT            00007060   00000007  00000000  00000007  RWIX
+  XINT                  00007070   0000000b  00000000  0000000b  RWIX
+  SCIA                  00007200   00000010  00000000  00000010  RWIX
+  SCIB                  00007210   00000010  00000000  00000010  RWIX
+  SCIC                  00007220   00000010  00000000  00000010  RWIX
+  SCID                  00007230   00000010  00000000  00000010  RWIX
+  I2CA                  00007300   00000022  00000000  00000022  RWIX
+  I2CB                  00007340   00000022  00000000  00000022  RWIX
+  ADCA                  00007400   00000080  0000007c  00000004  RWIX
+  ADCB                  00007480   00000080  0000007c  00000004  RWIX
+  ADCC                  00007500   00000080  00000000  00000080  RWIX
+  ADCD                  00007580   00000080  00000000  00000080  RWIX
+  INPUTXBAR             00007900   00000020  00000000  00000020  RWIX
+  XBAR                  00007920   00000020  00000000  00000020  RWIX
+  SYNCSOC               00007940   00000006  00000000  00000006  RWIX
+  DMACLASRCSEL          00007980   0000001a  00000000  0000001a  RWIX
+  EPWMXBAR              00007a00   00000040  00000000  00000040  RWIX
+  CLBXBAR               00007a40   00000040  00000000  00000040  RWIX
+  OUTPUTXBAR            00007a80   00000040  00000000  00000040  RWIX
+  GPIOCTRL              00007c00   00000180  00000180  00000000  RWIX
+  GPIODATA              00007f00   00000030  00000030  00000000  RWIX
+  RAMLS5                0000a800   00000800  0000022f  000005d1  RWIX
+  RAMD1                 0000b800   00000800  00000000  00000800  RWIX
+  RAMGS0                0000c000   00001000  00000000  00001000  RWIX
+  RAMGS1                0000d000   00001000  00000000  00001000  RWIX
+  RAMGS2                0000e000   00001000  00000000  00001000  RWIX
+  RAMGS3                0000f000   00001000  00000000  00001000  RWIX
+  RAMGS4                00010000   00001000  00000000  00001000  RWIX
+  RAMGS5                00011000   00001000  00000000  00001000  RWIX
+  RAMGS6                00012000   00001000  00000000  00001000  RWIX
+  RAMGS7                00013000   00001000  00000000  00001000  RWIX
+  RAMGS8                00014000   00001000  00000000  00001000  RWIX
+  RAMGS9                00015000   00001000  00000000  00001000  RWIX
+  RAMGS10               00016000   00001000  00000000  00001000  RWIX
+  RAMGS11               00017000   00004000  00001f68  00002098  RWIX
+  RAMGS15               0001b000   00000ff8  00000000  00000ff8  RWIX
+  CPU2TOCPU1RAM         0003f800   00000400  00000000  00000400  RWIX
+  CPU1TOCPU2RAM         0003fc00   00000400  00000000  00000400  RWIX
+  EMIF1                 00047000   00000070  00000000  00000070  RWIX
+  EMIF2                 00047800   00000070  00000000  00000070  RWIX
+  CANA                  00048000   00000200  00000000  00000200  RWIX
+  CANA_MSG_RAM          00049000   00000800  00000000  00000800  RWIX
+  CANB                  0004a000   00000200  00000000  00000200  RWIX
+  CANB_MSG_RAM          0004b000   00000800  00000000  00000800  RWIX
+  IPC                   00050000   00000024  00000000  00000024  RWIX
+  FLASHPUMPSEMAPHORE    00050024   00000002  00000000  00000002  RWIX
+  DEVCFG                0005d000   0000012e  0000012e  00000000  RWIX
+  ANALOGSUBSYS          0005d180   00000048  0000003e  0000000a  RWIX
+  CLKCFG                0005d200   00000032  00000032  00000000  RWIX
+  CPUSYS                0005d300   00000082  00000082  00000000  RWIX
+  ROMPREFETCH           0005e608   00000002  00000000  00000002  RWIX
+  DCSMZ1                0005f000   00000023  00000000  00000023  RWIX
+  DCSMZ2                0005f040   00000023  00000000  00000023  RWIX
+  DCSMCOMMON            0005f070   00000008  00000000  00000008  RWIX
+  MEMCFG                0005f400   00000080  00000000  00000080  RWIX
+  EMIF1CONFIG           0005f480   00000020  00000000  00000020  RWIX
+  EMIF2CONFIG           0005f4a0   00000020  00000000  00000020  RWIX
+  ACCESSPROTECTION      0005f4c0   00000040  00000000  00000040  RWIX
+  MEMORYERROR           0005f500   00000040  00000000  00000040  RWIX
+  ROMWAITSTATE          0005f540   00000002  00000000  00000002  RWIX
+  FLASH0CTRL            0005f800   00000182  00000000  00000182  RWIX
+  FLASH0ECC             0005fb00   00000028  00000000  00000028  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+codestart 
+*          0    00000000    00000002     
+                  00000000    00000002     F2837xD_CodeStartBranch.obj (codestart)
+
+.cinit     0    00000128    0000002c     
+                  00000128    0000000f     (.cinit..data.load) [load image, compression = lzss]
+                  00000137    00000001     --HOLE-- [fill = 0]
+                  00000138    00000006     (__TI_handler_table)
+                  0000013e    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  00000142    00000004     (.cinit.PieVectTableFile.load) [load image, compression = zero_init]
+                  00000146    00000002     --HOLE-- [fill = 0]
+                  00000148    0000000c     (__TI_cinit_table)
+
+.reset     0    003fffc0    00000000     DSECT
+
+.stack     1    00000400    00000200     UNINITIALIZED
+                  00000400    00000200     --HOLE--
+
+.bss       1    00017000    00001f68     UNINITIALIZED
+                  00017000    00000fa0     main.obj (.bss:tBuffer1)
+                  00017fa0    00000fa0     main.obj (.bss:tBuffer2)
+                  00018f40    00000028     main.obj (.bss)
+
+.init_array 
+*          0    00000123    00000000     UNINITIALIZED
+
+.const     1    0000a800    0000020c     
+                  0000a800    00000084     rts2800_fpu32_eabi.lib : k_rem_pio2.c.obj (.const:ipio2)
+                  0000a884    0000003c                            : k_cos.c.obj (.const)
+                  0000a8c0    00000064                            : e_rem_pio2.c.obj (.const)
+                  0000a924    0000001c                            : s_scalbn.c.obj (.const)
+                  0000a940    00000038                            : k_sin.c.obj (.const)
+                  0000a978    00000004                            : k_rem_pio2.c.obj (.const:init_jk)
+                  0000a97c    00000004     interruptHandlers.obj (.const)
+                  0000a980    0000002c     rts2800_fpu32_eabi.lib : k_rem_pio2.c.obj (.const)
+                  0000a9ac    00000020                            : k_rem_pio2.c.obj (.const:PIo2)
+                  0000a9cc    00000020     voltCtrl_Module.obj (.const)
+                  0000a9ec    0000000c     current.obj (.const)
+                  0000a9f8    00000004     rts2800_fpu32_eabi.lib : s_cos.c.obj (.const)
+                  0000a9fc    00000004                            : s_sin.c.obj (.const)
+                  0000aa00    0000000c                            : s_floor.c.obj (.const)
+
+.data      1    0000aa0c    00000023     UNINITIALIZED
+                  0000aa0c    00000016     interruptHandlers.obj (.data)
+                  0000aa22    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
+                  0000aa28    00000002                            : _lock.c.obj (.data:_lock)
+                  0000aa2a    00000002                            : _lock.c.obj (.data:_unlock)
+                  0000aa2c    00000002     voltCtrl_Module.obj (.data)
+                  0000aa2e    00000001     rts2800_fpu32_eabi.lib : errno.c.obj (.data)
+
+.TI.ramfunc 
+*          0    00000123    00000004     
+                  00000123    00000004     F2837xD_usDelay.obj (.TI.ramfunc)
+
+GETBUFFER 
+*          0    0003f800    00000000     DSECT
+
+GETWRITEIDX 
+*          0    0003f800    00000000     DSECT
+
+PUTREADIDX 
+*          0    0003f800    00000000     DSECT
+
+PieVectTableFile 
+*          1    00000d00    000001c0     UNINITIALIZED
+                  00000d00    000001c0     F2837xD_GlobalVariableDefs.obj (PieVectTableFile)
+
+EmuKeyVar 
+*          1    00000d00    00000000     UNINITIALIZED
+
+EmuBModeVar 
+*          1    00000d00    00000000     UNINITIALIZED
+
+EmuBootPinsVar 
+*          1    00000d00    00000000     UNINITIALIZED
+
+FlashCallbackVar 
+*          1    00000d00    00000000     UNINITIALIZED
+
+FlashScalingVar 
+*          1    00000d00    00000000     UNINITIALIZED
+
+AdcaRegsFile 
+*          1    00007400    0000007c     UNINITIALIZED
+                  00007400    0000007c     F2837xD_GlobalVariableDefs.obj (AdcaRegsFile)
+
+AdcbRegsFile 
+*          1    00007480    0000007c     UNINITIALIZED
+                  00007480    0000007c     F2837xD_GlobalVariableDefs.obj (AdcbRegsFile)
+
+AdcaResultRegsFile 
+*          1    00000b00    00000018     UNINITIALIZED
+                  00000b00    00000018     F2837xD_GlobalVariableDefs.obj (AdcaResultRegsFile)
+
+AdcbResultRegsFile 
+*          1    00000b20    00000018     UNINITIALIZED
+                  00000b20    00000018     F2837xD_GlobalVariableDefs.obj (AdcbResultRegsFile)
+
+AnalogSubsysRegsFile 
+*          1    0005d180    0000003e     UNINITIALIZED
+                  0005d180    0000003e     F2837xD_GlobalVariableDefs.obj (AnalogSubsysRegsFile)
+
+ClkCfgRegsFile 
+*          1    0005d200    00000032     UNINITIALIZED
+                  0005d200    00000032     F2837xD_GlobalVariableDefs.obj (ClkCfgRegsFile)
+
+CpuSysRegsFile 
+*          1    0005d300    00000082     UNINITIALIZED
+                  0005d300    00000082     F2837xD_GlobalVariableDefs.obj (CpuSysRegsFile)
+
+DevCfgRegsFile 
+*          1    0005d000    0000012e     UNINITIALIZED
+                  0005d000    0000012e     F2837xD_GlobalVariableDefs.obj (DevCfgRegsFile)
+
+EPwm3RegsFile 
+*          1    00004200    00000100     UNINITIALIZED
+                  00004200    00000100     F2837xD_GlobalVariableDefs.obj (EPwm3RegsFile)
+
+EPwm6RegsFile 
+*          1    00004500    00000100     UNINITIALIZED
+                  00004500    00000100     F2837xD_GlobalVariableDefs.obj (EPwm6RegsFile)
+
+EQep1RegsFile 
+*          1    00005100    00000022     UNINITIALIZED
+                  00005100    00000022     F2837xD_GlobalVariableDefs.obj (EQep1RegsFile)
+
+GpioCtrlRegsFile 
+*          1    00007c00    00000180     UNINITIALIZED
+                  00007c00    00000180     F2837xD_GlobalVariableDefs.obj (GpioCtrlRegsFile)
+
+GpioDataRegsFile 
+*          1    00007f00    00000030     UNINITIALIZED
+                  00007f00    00000030     F2837xD_GlobalVariableDefs.obj (GpioDataRegsFile)
+
+PieCtrlRegsFile 
+*          1    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     F2837xD_GlobalVariableDefs.obj (PieCtrlRegsFile)
+
+SpibRegsFile 
+*          1    00006110    00000010     UNINITIALIZED
+                  00006110    00000010     F2837xD_GlobalVariableDefs.obj (SpibRegsFile)
+
+WdRegsFile 
+*          1    00007000    0000002b     UNINITIALIZED
+                  00007000    0000002b     F2837xD_GlobalVariableDefs.obj (WdRegsFile)
+
+.text.1    0    00008000    000007fe     
+                  00008000    00000438     rts2800_fpu32_eabi.lib : e_rem_pio2.c.obj (.text)
+                  00008438    00000367     mcu.obj (.text)
+                  0000879f    00000031     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  000087d0    0000002b                            : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  000087fb    00000002                            : pre_init.c.obj (.text)
+                  000087fd    00000001                            : startup.c.obj (.text)
+
+.text.2    0    00008800    000007ff     
+                  00008800    0000023e     voltCtrl_Module.obj (.text)
+                  00008a3e    000001d1     current.obj (.text)
+                  00008c0f    000001af     interruptHandlers.obj (.text:retain)
+                  00008dbe    0000010b     rts2800_fpu32_eabi.lib : k_cos.c.obj (.text)
+                  00008ec9    000000e9                            : s_floor.c.obj (.text)
+                  00008fb2    0000002a                            : fd_cmp28.asm.obj (.text)
+                  00008fdc    00000023                            : fd_tofsfpu32.asm.obj (.text)
+
+.text.3    0    00009000    000005ad     
+                  00009000    000000ce     rts2800_fpu32_eabi.lib : s_cos.c.obj (.text)
+                  000090ce    000000cb                            : s_sin.c.obj (.text)
+                  00009199    000000ae                            : s_scalbn.c.obj (.text)
+                  00009247    0000009c                            : fd_add28.asm.obj (.text)
+                  000092e3    00000088                            : fs_div28.asm.obj (.text)
+                  0000936b    00000083                            : fd_mpy28.asm.obj (.text)
+                  000093ee    00000029                            : exit.c.obj (.text)
+                  00009417    00000025                            : s_copysign.c.obj (.text)
+                  0000943c    00000022                            : i_div28.asm.obj (.text)
+                  0000945e    00000021                            : fd_toi28.asm.obj (.text)
+                  0000947f    0000001f                            : fd_tol28.asm.obj (.text)
+                  0000949e    0000001d                            : memcpy.c.obj (.text)
+                  000094bb    0000001c                            : fs_tofdfpu32.asm.obj (.text)
+                  000094d7    0000001c                            : l_tofd28.asm.obj (.text)
+                  000094f3    0000001a                            : fd_tou28.asm.obj (.text)
+                  0000950d    00000018                            : ll_aox28.asm.obj (.text)
+                  00009525    00000017     encoder.obj (.text)
+                  0000953c    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
+                  00009553    00000017                            : u_tofd28.asm.obj (.text)
+                  0000956a    0000000e                            : fd_sub28.asm.obj (.text)
+                  00009578    0000000c                            : args_main.c.obj (.text)
+                  00009584    00000009                            : _lock.c.obj (.text)
+                  0000958d    00000009                            : fd_neg28.asm.obj (.text)
+                  00009596    00000008     F2837xD_CodeStartBranch.obj (.text)
+                  0000959e    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  000095a6    00000007                            : memset.c.obj (.text)
+
+.text.4    0    0000b000    00000800     
+                  0000b000    00000663     rts2800_fpu32_eabi.lib : k_rem_pio2.c.obj (.text)
+                  0000b663    00000124                            : k_sin.c.obj (.text)
+                  0000b787    00000073     main.obj (.text)
+                  0000b7fa    00000006     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI)
+
+MODULE SUMMARY
+
+       Module                           code   ro data   rw data
+       ------                           ----   -------   -------
+    ./
+       main.obj                         115    0         8040   
+       mcu.obj                          871    0         0      
+       voltCtrl_Module.obj              574    32        2      
+       current.obj                      465    12        0      
+       interruptHandlers.obj            431    4         22     
+       encoder.obj                      23     0         0      
+    +--+--------------------------------+------+---------+---------+
+       Total:                           2479   48        8064   
+                                                                
+    ./TI_Files/
+       F2837xD_GlobalVariableDefs.obj   0      0         2351   
+       F2837xD_CodeStartBranch.obj      10     0         0      
+       F2837xD_usDelay.obj              4      0         0      
+    +--+--------------------------------+------+---------+---------+
+       Total:                           14     0         2351   
+                                                                
+    /home/spravcapc/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_20.2.1.LTS/lib/rts2800_fpu32_eabi.lib
+       k_rem_pio2.c.obj                 1635   212       0      
+       e_rem_pio2.c.obj                 1080   100       0      
+       k_sin.c.obj                      292    56        0      
+       k_cos.c.obj                      267    60        0      
+       s_floor.c.obj                    233    12        0      
+       s_cos.c.obj                      206    4         0      
+       s_sin.c.obj                      203    4         0      
+       s_scalbn.c.obj                   174    28        0      
+       fd_add28.asm.obj                 156    0         0      
+       fs_div28.asm.obj                 136    0         0      
+       fd_mpy28.asm.obj                 131    0         0      
+       copy_decompress_lzss.c.obj       49     0         0      
+       exit.c.obj                       41     0         6      
+       autoinit.c.obj                   43     0         0      
+       fd_cmp28.asm.obj                 42     0         0      
+       s_copysign.c.obj                 37     0         0      
+       fd_tofsfpu32.asm.obj             35     0         0      
+       i_div28.asm.obj                  34     0         0      
+       fd_toi28.asm.obj                 33     0         0      
+       fd_tol28.asm.obj                 31     0         0      
+       memcpy.c.obj                     29     0         0      
+       fs_tofdfpu32.asm.obj             28     0         0      
+       l_tofd28.asm.obj                 28     0         0      
+       fd_tou28.asm.obj                 26     0         0      
+       ll_aox28.asm.obj                 24     0         0      
+       boot28.asm.obj                   23     0         0      
+       u_tofd28.asm.obj                 23     0         0      
+       fd_sub28.asm.obj                 14     0         0      
+       _lock.c.obj                      9      0         4      
+       args_main.c.obj                  12     0         0      
+       fd_neg28.asm.obj                 9      0         0      
+       copy_decompress_none.c.obj       8      0         0      
+       memset.c.obj                     7      0         0      
+       copy_zero_init.c.obj             6      0         0      
+       pre_init.c.obj                   2      0         0      
+       errno.c.obj                      0      0         1      
+       startup.c.obj                    1      0         0      
+    +--+--------------------------------+------+---------+---------+
+       Total:                           5107   476       11     
+                                                                
+       Stack:                           0      0         512    
+       Linker Generated:                0      41        0      
+    +--+--------------------------------+------+---------+---------+
+       Grand Total:                     7600   565       10938  
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00000148 records: 3, size/record: 4, table size: 12
+	.data: load addr=00000128, load size=0000000f bytes, run addr=0000aa0c, run size=00000023 bytes, compression=lzss
+	.bss: load addr=0000013e, load size=00000004 bytes, run addr=00017000, run size=00001f68 bytes, compression=zero_init
+	PieVectTableFile: load addr=00000142, load size=00000004 bytes, run addr=00000d00, run size=000001c0 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00000138 records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+00000b00      2c (00000b00)     AdcaResultRegs
+00000b20      2c (00000b00)     AdcbResultRegs
+
+00000ce0      33 (00000cc0)     PieCtrlRegs
+
+00000d00      34 (00000d00)     PieVectTable
+
+00004200     108 (00004200)     EPwm3Regs
+
+00004500     114 (00004500)     EPwm6Regs
+
+00005100     144 (00005100)     EQep1Regs
+
+00006110     184 (00006100)     SpibRegs
+
+00007000     1c0 (00007000)     WdRegs
+
+00007400     1d0 (00007400)     AdcaRegs
+
+00007480     1d2 (00007480)     AdcbRegs
+
+00007c00     1f0 (00007c00)     GpioCtrlRegs
+
+00007f00     1fc (00007f00)     GpioDataRegs
+
+0000aa0c     2a8 (0000aa00)     Counter1
+0000aa0d     2a8 (0000aa00)     Counter2
+0000aa0e     2a8 (0000aa00)     CounterReset
+0000aa10     2a8 (0000aa00)     CurrentFiltered
+0000aa12     2a8 (0000aa00)     P
+0000aa14     2a8 (0000aa00)     I
+0000aa16     2a8 (0000aa00)     PIOut
+0000aa18     2a8 (0000aa00)     GainP
+0000aa1a     2a8 (0000aa00)     GainI
+0000aa1c     2a8 (0000aa00)     P2
+0000aa1e     2a8 (0000aa00)     I2
+0000aa20     2a8 (0000aa00)     PIOut2
+0000aa22     2a8 (0000aa00)     __TI_enable_exit_profile_output
+0000aa24     2a8 (0000aa00)     __TI_cleanup_ptr
+0000aa26     2a8 (0000aa00)     __TI_dtors_ptr
+0000aa28     2a8 (0000aa00)     _lock
+0000aa2a     2a8 (0000aa00)     _unlock
+0000aa2e     2a8 (0000aa00)     errno
+
+00017000     5c0 (00017000)     tBuffer1
+
+00017fa0     5fe (00017f80)     tBuffer2
+
+00018f40     63d (00018f40)     Voltage1
+00018f52     63d (00018f40)     Current1
+
+0005d000    1740 (0005d000)     DevCfgRegs
+
+0005d180    1746 (0005d180)     AnalogSubsysRegs
+
+0005d200    1748 (0005d200)     ClkCfgRegs
+
+0005d300    174c (0005d300)     CpuSysRegs
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                           
+----  -------   ----                           
+1     00007400  AdcaRegs                       
+1     00000b00  AdcaResultRegs                 
+1     00007480  AdcbRegs                       
+1     00000b20  AdcbResultRegs                 
+1     0005d180  AnalogSubsysRegs               
+0     000093ee  C$$EXIT                        
+1     0005d200  ClkCfgRegs                     
+1     0000aa0c  Counter1                       
+1     0000aa0d  Counter2                       
+1     0000aa0e  CounterReset                   
+1     0005d300  CpuSysRegs                     
+1     00018f52  Current1                       
+1     0000aa10  CurrentFiltered                
+1     0005d000  DevCfgRegs                     
+1     00004200  EPwm3Regs                      
+1     00004500  EPwm6Regs                      
+1     00005100  EQep1Regs                      
+1     0000aa1a  GainI                          
+1     0000aa18  GainP                          
+1     00007c00  GpioCtrlRegs                   
+1     00007f00  GpioDataRegs                   
+1     0000aa14  I                              
+1     0000aa1e  I2                             
+1     0000aa12  P                              
+1     0000aa1c  P2                             
+1     0000aa16  PIOut                          
+1     0000aa20  PIOut2                         
+1     00000ce0  PieCtrlRegs                    
+1     00000d00  PieVectTable                   
+1     00006110  SpibRegs                       
+1     00018f40  Voltage1                       
+1     00007000  WdRegs                         
+0     00000123  _F28x_usDelay                  
+0     00000148  __TI_CINIT_Base                
+0     00000154  __TI_CINIT_Limit               
+0     00000138  __TI_Handler_Table_Base        
+0     0000013e  __TI_Handler_Table_Limit       
+1     00000600  __TI_STACK_END                 
+abs   00000200  __TI_STACK_SIZE                
+0     000087d0  __TI_auto_init_nobinit_nopinit 
+1     0000aa24  __TI_cleanup_ptr               
+0     0000879f  __TI_decompress_lzss           
+0     0000959e  __TI_decompress_none           
+1     0000aa26  __TI_dtors_ptr                 
+1     0000aa22  __TI_enable_exit_profile_output
+abs   ffffffff  __TI_pprof_out_hndl            
+abs   ffffffff  __TI_prof_data_size            
+abs   ffffffff  __TI_prof_data_start           
+0     0000b7fa  __TI_zero_init                 
+0     00009247  __c28xabi_addd                 
+0     0000950d  __c28xabi_andll                
+0     00008fb2  __c28xabi_cmpd                 
+0     000092e3  __c28xabi_divf                 
+0     0000943c  __c28xabi_divi                 
+0     00008fdc  __c28xabi_dtof                 
+0     0000945e  __c28xabi_dtoi                 
+0     0000947f  __c28xabi_dtol                 
+0     000094f3  __c28xabi_dtou                 
+0     000094bb  __c28xabi_ftod                 
+0     000094d7  __c28xabi_ltod                 
+0     0000944d  __c28xabi_modi                 
+0     0000936b  __c28xabi_mpyd                 
+0     0000958d  __c28xabi_negd                 
+0     00009515  __c28xabi_orll                 
+0     0000956a  __c28xabi_subd                 
+0     00009553  __c28xabi_utod                 
+0     0000951d  __c28xabi_xorll                
+n/a   UNDEFED   __c_args__                     
+0     00008dbe  __kernel_cos                   
+0     0000b000  __kernel_rem_pio2              
+0     0000b663  __kernel_sin                   
+0     00008000  __rem_pio2                     
+1     00000400  __stack                        
+0     00009578  _args_main                     
+0     0000953c  _c_int00                       
+1     0000aa28  _lock                          
+0     0000958c  _nop                           
+0     00009588  _register_lock                 
+0     00009584  _register_unlock               
+0     000087fd  _system_post_cinit             
+0     000087fb  _system_pre_init               
+1     0000aa2a  _unlock                        
+0     000093ee  abort                          
+0     00000000  code_start                     
+0     00009417  copysign                       
+0     00009417  copysignl                      
+0     00009000  cos                            
+0     00009000  cosl                           
+0     00008aae  current_clarkeTransformation   
+0     00008af1  current_parkTransformation     
+0     00008a3e  current_sensAndScale           
+0     00008bcd  current_sensAndTransform       
+0     00009525  enc_calcPosition_electrical    
+1     0000aa2e  errno                          
+0     000093f0  exit                           
+0     00008ec9  floor                          
+0     00008ec9  floorl                         
+0     00008c55  intrr_ADC_INT1                 
+0     00008c0f  intrr_ePWM3                    
+0     00009199  ldexp                          
+0     00009199  ldexpl                         
+0     0000b787  main                           
+0     00008441  mcu_disableDog                 
+0     00008467  mcu_enableUnbondedIOPullups    
+0     00008653  mcu_initADC                    
+0     00008438  mcu_initClocks                 
+0     00008784  mcu_initInterrupts             
+0     0000854e  mcu_initPWM                    
+0     00008723  mcu_initQep                    
+0     000086c4  mcu_initSPI                    
+0     000084b4  mcu_initSysPll                 
+0     0000844f  mcu_trimADC                    
+0     0000949e  memcpy                         
+0     000095a6  memset                         
+0     00009199  scalbn                         
+0     00009199  scalbnl                        
+0     000090ce  sin                            
+0     000090ce  sinl                           
+1     00017000  tBuffer1                       
+1     00017fa0  tBuffer2                       
+0     0000895e  voltCtrl_alphaBeta2abc         
+0     00008809  voltCtrl_bridgeDisable         
+0     00008800  voltCtrl_bridgeEnable          
+0     00008882  voltCtrl_calcPhaseValue        
+0     000089db  voltCtrl_dq2alphaBeta          
+0     00008812  voltCtrl_toPWM                 
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                           
+----  -------   ----                           
+0     00000000  code_start                     
+0     00000123  _F28x_usDelay                  
+0     00000138  __TI_Handler_Table_Base        
+0     0000013e  __TI_Handler_Table_Limit       
+0     00000148  __TI_CINIT_Base                
+0     00000154  __TI_CINIT_Limit               
+0     00008000  __rem_pio2                     
+0     00008438  mcu_initClocks                 
+0     00008441  mcu_disableDog                 
+0     0000844f  mcu_trimADC                    
+0     00008467  mcu_enableUnbondedIOPullups    
+0     000084b4  mcu_initSysPll                 
+0     0000854e  mcu_initPWM                    
+0     00008653  mcu_initADC                    
+0     000086c4  mcu_initSPI                    
+0     00008723  mcu_initQep                    
+0     00008784  mcu_initInterrupts             
+0     0000879f  __TI_decompress_lzss           
+0     000087d0  __TI_auto_init_nobinit_nopinit 
+0     000087fb  _system_pre_init               
+0     000087fd  _system_post_cinit             
+0     00008800  voltCtrl_bridgeEnable          
+0     00008809  voltCtrl_bridgeDisable         
+0     00008812  voltCtrl_toPWM                 
+0     00008882  voltCtrl_calcPhaseValue        
+0     0000895e  voltCtrl_alphaBeta2abc         
+0     000089db  voltCtrl_dq2alphaBeta          
+0     00008a3e  current_sensAndScale           
+0     00008aae  current_clarkeTransformation   
+0     00008af1  current_parkTransformation     
+0     00008bcd  current_sensAndTransform       
+0     00008c0f  intrr_ePWM3                    
+0     00008c55  intrr_ADC_INT1                 
+0     00008dbe  __kernel_cos                   
+0     00008ec9  floor                          
+0     00008ec9  floorl                         
+0     00008fb2  __c28xabi_cmpd                 
+0     00008fdc  __c28xabi_dtof                 
+0     00009000  cos                            
+0     00009000  cosl                           
+0     000090ce  sin                            
+0     000090ce  sinl                           
+0     00009199  ldexp                          
+0     00009199  ldexpl                         
+0     00009199  scalbn                         
+0     00009199  scalbnl                        
+0     00009247  __c28xabi_addd                 
+0     000092e3  __c28xabi_divf                 
+0     0000936b  __c28xabi_mpyd                 
+0     000093ee  C$$EXIT                        
+0     000093ee  abort                          
+0     000093f0  exit                           
+0     00009417  copysign                       
+0     00009417  copysignl                      
+0     0000943c  __c28xabi_divi                 
+0     0000944d  __c28xabi_modi                 
+0     0000945e  __c28xabi_dtoi                 
+0     0000947f  __c28xabi_dtol                 
+0     0000949e  memcpy                         
+0     000094bb  __c28xabi_ftod                 
+0     000094d7  __c28xabi_ltod                 
+0     000094f3  __c28xabi_dtou                 
+0     0000950d  __c28xabi_andll                
+0     00009515  __c28xabi_orll                 
+0     0000951d  __c28xabi_xorll                
+0     00009525  enc_calcPosition_electrical    
+0     0000953c  _c_int00                       
+0     00009553  __c28xabi_utod                 
+0     0000956a  __c28xabi_subd                 
+0     00009578  _args_main                     
+0     00009584  _register_unlock               
+0     00009588  _register_lock                 
+0     0000958c  _nop                           
+0     0000958d  __c28xabi_negd                 
+0     0000959e  __TI_decompress_none           
+0     000095a6  memset                         
+0     0000b000  __kernel_rem_pio2              
+0     0000b663  __kernel_sin                   
+0     0000b787  main                           
+0     0000b7fa  __TI_zero_init                 
+1     00000400  __stack                        
+1     00000600  __TI_STACK_END                 
+1     00000b00  AdcaResultRegs                 
+1     00000b20  AdcbResultRegs                 
+1     00000ce0  PieCtrlRegs                    
+1     00000d00  PieVectTable                   
+1     00004200  EPwm3Regs                      
+1     00004500  EPwm6Regs                      
+1     00005100  EQep1Regs                      
+1     00006110  SpibRegs                       
+1     00007000  WdRegs                         
+1     00007400  AdcaRegs                       
+1     00007480  AdcbRegs                       
+1     00007c00  GpioCtrlRegs                   
+1     00007f00  GpioDataRegs                   
+1     0000aa0c  Counter1                       
+1     0000aa0d  Counter2                       
+1     0000aa0e  CounterReset                   
+1     0000aa10  CurrentFiltered                
+1     0000aa12  P                              
+1     0000aa14  I                              
+1     0000aa16  PIOut                          
+1     0000aa18  GainP                          
+1     0000aa1a  GainI                          
+1     0000aa1c  P2                             
+1     0000aa1e  I2                             
+1     0000aa20  PIOut2                         
+1     0000aa22  __TI_enable_exit_profile_output
+1     0000aa24  __TI_cleanup_ptr               
+1     0000aa26  __TI_dtors_ptr                 
+1     0000aa28  _lock                          
+1     0000aa2a  _unlock                        
+1     0000aa2e  errno                          
+1     00017000  tBuffer1                       
+1     00017fa0  tBuffer2                       
+1     00018f40  Voltage1                       
+1     00018f52  Current1                       
+1     0005d000  DevCfgRegs                     
+1     0005d180  AnalogSubsysRegs               
+1     0005d200  ClkCfgRegs                     
+1     0005d300  CpuSysRegs                     
+abs   00000200  __TI_STACK_SIZE                
+abs   ffffffff  __TI_pprof_out_hndl            
+abs   ffffffff  __TI_prof_data_size            
+abs   ffffffff  __TI_prof_data_start           
+n/a   UNDEFED   __c_args__                     
+
+[126 symbols]
