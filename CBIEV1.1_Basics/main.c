@@ -67,7 +67,7 @@ EDIS;
         PositionRaw = ((RxData[0] & 0x07) << 10) | (RxData[1] << 2) | (RxData[2] & 0xC0);
         Error_bits = (RxData[2] & 0x30) >> 4;
         CRC_value = (RxData[2] & 0x0F << 2) | ((RxData[3] & 0xC0) >> 6);
-        float position = (360/PositionRaw);
+        
 
 
 
